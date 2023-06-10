@@ -37,17 +37,19 @@ public class SplashScreen extends AppCompatActivity {
 //                }else {
 //                    startActivity(new Intent(SplashScreen.this,MainActivity.class));
 //                }
+//
+//
+//                sharedPreferences = getSharedPreferences("login", Context.MODE_PRIVATE)  ;
+//                boolean isLoggedin = sharedPreferences.getBoolean("isLoggedin",false) ;
+//                if(isLoggedin) {
+//                    //Toast.makeText(SplashScreen.this,"true",Toast.LENGTH_SHORT).show(); ;
+//                    startActivity(new Intent(SplashScreen.this,Home_Page.class));
+//                }
+//                else {
+//                    startActivity(new Intent(SplashScreen.this,Login_Page.class)) ;
+//                }
 
-
-                sharedPreferences = getSharedPreferences("login", Context.MODE_PRIVATE)  ;
-                boolean isLoggedin = sharedPreferences.getBoolean("isLoggedin",false) ;
-                if(isLoggedin) {
-                    //Toast.makeText(SplashScreen.this,"true",Toast.LENGTH_SHORT).show(); ;
-                    startActivity(new Intent(SplashScreen.this,Home_Page.class));
-                }
-                else {
-                    startActivity(new Intent(SplashScreen.this,Login_Page.class)) ;
-                }
+                startActivity(new Intent(SplashScreen.this, MainActivity.class)) ;
 
             }
         });

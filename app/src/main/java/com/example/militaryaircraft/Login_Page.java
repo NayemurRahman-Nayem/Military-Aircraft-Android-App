@@ -68,12 +68,12 @@ public class Login_Page extends AppCompatActivity {
 
 
 
-//        sharedPreferences = getSharedPreferences("login",Context.MODE_PRIVATE)  ;
-//        boolean isLoggedin = sharedPreferences.getBoolean("isLoggedin",false) ;
-//        if(isLoggedin) {
-//            Toast.makeText(this,"true",Toast.LENGTH_SHORT).show(); ;
-//            startActivity(new Intent(Login_Page.this,Home_Page.class));
-//        }
+        sharedPreferences = getSharedPreferences("login",Context.MODE_PRIVATE)  ;
+        boolean isLoggedin = sharedPreferences.getBoolean("isLoggedin",false) ;
+        if(isLoggedin) {
+            Toast.makeText(this,"true",Toast.LENGTH_SHORT).show(); ;
+            startActivity(new Intent(Login_Page.this,Home_Page.class));
+        }
 
 
 
