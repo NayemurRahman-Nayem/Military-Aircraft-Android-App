@@ -258,6 +258,7 @@ public class Register_Page extends AppCompatActivity {
                 else {
                     userGender = radioButtonRegisterGenderSelected.getText().toString();
                     progressBar.setVisibility(View.VISIBLE);
+                    //sendVerificationEmail() ;
                     registerUser(userFullname, userEmail, userdateofBirth, userGender, userPhone, userPass , username);
                 }
             }
@@ -367,4 +368,28 @@ public class Register_Page extends AppCompatActivity {
             editTextUsername.setError("Username cannot be empty");
         }
     }
+
+
+
+//    private void sendVerificationEmail() {
+//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//
+//        if (user != null&&!user.isEmailVerified()) {
+//
+//            user.sendEmailVerification()
+//                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+//                        @Override
+//                        public void onComplete(@NonNull Task<Void> task) {
+//                            if (task.isSuccessful()) {
+//                                Log.d(TAG, "Email verification sent.");
+//                                Toast.makeText(Register_Page.this, "Email verification sent", Toast.LENGTH_SHORT).show();
+//                            }
+//                            else {
+//                                Log.e(TAG, "Error sending email verification", task.getException());
+//                                Toast.makeText(Register_Page.this, "Error sending email verification", Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//                    });
+//        }
+//    }
 }

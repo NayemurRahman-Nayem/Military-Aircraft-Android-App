@@ -26,7 +26,6 @@ import android.widget.ProgressBar ;
 import android.widget.TextView ;
 import android.widget.Toast ;
 import com.example.militaryaircraft.databinding.ActivityLoginPageBinding ;
-import com.example.militaryaircraft.databinding.ActivityMainBinding ;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -47,7 +46,7 @@ public class Login_Page extends AppCompatActivity {
     CheckBox remeberMe ;
     private ProgressBar progressBar;
     private FirebaseAuth authProfile;
-    SharedPreferences sharedPreferences ;
+    private  SharedPreferences sharedPreferences ;
     private FirebaseAuth mAuth;
     SessionManager sessionManager;
     private static final String TAG = "LoginActivity";
@@ -68,12 +67,19 @@ public class Login_Page extends AppCompatActivity {
 
 
 
-        sharedPreferences = getSharedPreferences("login",Context.MODE_PRIVATE)  ;
-        boolean isLoggedin = sharedPreferences.getBoolean("isLoggedin",false) ;
-        if(isLoggedin) {
-            Toast.makeText(this,"true",Toast.LENGTH_SHORT).show(); ;
-            startActivity(new Intent(Login_Page.this,Home_Page.class));
+
+
+        //Toast.makeText(this, "Has Login Page ", Toast.LENGTH_SHORT).show();
+
+        SharedPreferences sharedPreferences = getSharedPreferences("login", Context.MODE_PRIVATE);
+        boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedin", false);
+        // Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+        if(isLoggedIn){
+            //Toast.makeText(this, "Already exists !!", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(Login_Page.this, Home_Page.class));
         }
+
+
 
 
 
@@ -104,6 +110,18 @@ public class Login_Page extends AppCompatActivity {
                     editTextLoginPwd.requestFocus();
                 } else{
                     progressBar.setVisibility(View.VISIBLE);
+                    if (remeberMe.isChecked()) {
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putBoolean("isLoggedin", true);
+                        editor.commit();
+                        //Toast.makeText(Login_Page.this, "Checked !!!!!!11" , Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putBoolean("isLoggedin",false);
+                        editor.commit();
+                        //Toast.makeText(Login_Page.this, "NOT    Checked !!!!!!11" , Toast.LENGTH_SHORT).show();
+                    }
                     loginUser(userEmail,userPass);
                 }
             }
@@ -120,23 +138,14 @@ public class Login_Page extends AppCompatActivity {
         if(!isConnected(this)) {
             showNoInternetDialog();
         }
-        if (remeberMe.isChecked()) {
-            SharedPreferences.Editor editor = sharedPreferences.edit() ;
-            editor.putBoolean("isLoggedin", true);
-            editor.commit();
-        }
-        else {
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putBoolean("isLoggedin",false);
-            editor.commit();
-        }
         authProfile.signInWithEmailAndPassword(userEmail,userPass).addOnCompleteListener(Login_Page.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
+                    //Toast.makeText(Login_Page.this, "olla ", Toast.LENGTH_SHORT).show();
                     FirebaseAuth firebaseAuth = FirebaseAuth.getInstance() ;
                     if(firebaseAuth.getCurrentUser().isEmailVerified()) {
-                        Toast.makeText(Login_Page.this, "You are logged in", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(Login_Page.this, "You are logged in", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(Login_Page.this, Home_Page.class));
                     }
                     else{
@@ -188,13 +197,5 @@ public class Login_Page extends AppCompatActivity {
                     }
                 });
     }
-    @Override
-    protected void onStart() {
-        super.onStart();
-        FirebaseUser user = mAuth.getCurrentUser();
-        if(user != null && user.isEmailVerified()){
-            startActivity(new Intent(getApplicationContext(), Home_Page.class));
-            this.finish();
-        }
-    }
+
 }

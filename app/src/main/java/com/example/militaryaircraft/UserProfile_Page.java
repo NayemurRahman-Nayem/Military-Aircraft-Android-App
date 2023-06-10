@@ -70,7 +70,7 @@ public class UserProfile_Page extends AppCompatActivity {
         getSupportActionBar().setTitle("Home") ;
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user == null) {
-            startActivity(new Intent(UserProfile_Page.this,MainActivity.class));
+            startActivity(new Intent(UserProfile_Page.this,Login_Page.class));
         }
         binding = ActivityUserProfilePageBinding.inflate(getLayoutInflater());
         name=findViewById(R.id.name);
@@ -227,14 +227,30 @@ public class UserProfile_Page extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+
                 FirebaseAuth.getInstance().signOut();
                 SharedPreferences sharedPreferences = getSharedPreferences("login", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.remove("isLoggedin");
                 editor.commit();
-                Toast.makeText(UserProfile_Page.this, "Logged out", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(UserProfile_Page.this,Login_Page.class));
+                //Toast.makeText(UserProfile_Page.this, "Logged out", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(UserProfile_Page.this, Login_Page.class));
                 finish();
+
+
+
+
+
+//                FirebaseAuth.getInstance().signOut();
+//                SharedPreferences sharedPreferences = getSharedPreferences("login", Context.MODE_PRIVATE);
+//                SharedPreferences.Editor editor = sharedPreferences.edit();
+//                editor.remove("isLoggedin");
+//                editor.commit();
+//                Toast.makeText(UserProfile_Page.this, "Logged out", Toast.LENGTH_SHORT).show();
+//                startActivity(new Intent(UserProfile_Page.this,Login_Page.class));
+//                finish();
             }
         });
 

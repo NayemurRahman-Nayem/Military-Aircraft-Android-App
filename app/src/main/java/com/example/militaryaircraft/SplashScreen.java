@@ -30,27 +30,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 doWork() ;
-//                mAuth = FirebaseAuth.getInstance() ;
-//                FirebaseUser user = mAuth.getCurrentUser();
-//                if(user != null && user.isEmailVerified()){
-//                    startActivity(new Intent(getApplicationContext(), Home_Page.class));
-//                }else {
-//                    startActivity(new Intent(SplashScreen.this,MainActivity.class));
-//                }
-//
-//
-//                sharedPreferences = getSharedPreferences("login", Context.MODE_PRIVATE)  ;
-//                boolean isLoggedin = sharedPreferences.getBoolean("isLoggedin",false) ;
-//                if(isLoggedin) {
-//                    //Toast.makeText(SplashScreen.this,"true",Toast.LENGTH_SHORT).show(); ;
-//                    startActivity(new Intent(SplashScreen.this,Home_Page.class));
-//                }
-//                else {
-//                    startActivity(new Intent(SplashScreen.this,Login_Page.class)) ;
-//                }
-
-                startActivity(new Intent(SplashScreen.this, MainActivity.class)) ;
-
+                startActivity(new Intent(SplashScreen.this, Login_Page.class)) ;
             }
         });
         thread.start();
