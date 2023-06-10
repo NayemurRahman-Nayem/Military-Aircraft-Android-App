@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_Post">
+
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_view" />
+
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginBottom="60dp"
+        android:padding="20sp"
+        android:text="POST"
+        android:textColor="#FAFAFA"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userPhoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/top_view"
+        android:layout_centerInParent="true"
+        android:foregroundGravity="center" />
+
+
+
+    <EditText
+        android:hint="Description"
+        android:background="@drawable/popup_edittext_style"
+        android:id="@+id/popup_description"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/userPhoto"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+         />
+
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPLOAD"
+            android:id="@+id/popup_add"
+            android:layout_below="@+id/popup_description"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            />
+
+
+
+
+
+</RelativeLayout>

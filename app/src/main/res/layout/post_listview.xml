@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="12dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/username"
+                android:id="@+id/showusericon"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/showusericon"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/userName"
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:id="@+id/dateTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:layout_below="@id/userName"
+                android:layout_toRightOf="@+id/showusericon"
+                android:layout_marginLeft="20dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Content "
+                android:textSize="25dp"
+                android:layout_below="@id/showusericon"
+                android:id="@+id/postContent"
+                android:textStyle="bold"
+
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/postContent"
+                android:id="@+id/blackbar"
+                android:background="#0C0C0C"
+                />
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/beforelike"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/blackbar"
+                    android:id="@+id/showlikebutton"
+                    />
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/blackbar"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@id/showlikebutton"
+                    android:id="@+id/likecount"
+                    />
+
+                <ImageView
+                    android:id="@+id/showcomment"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/blackbar"
+                    android:layout_marginLeft="210dp"
+                    android:layout_toRightOf="@+id/likecount"
+                    android:background="@drawable/comment" />
+
+
+                <TextView
+                    android:id="@+id/commentcount"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/blackbar"
+                    android:layout_toRightOf="@+id/showcomment"
+                    />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

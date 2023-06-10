@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfile_Page"
+    android:id="@+id/reload"
+    android:background="#6597AF"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_view" />
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginBottom="60dp"
+        android:padding="20sp"
+        android:text="Profile"
+        android:textColor="#FBFBFB"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_view"
+        android:orientation="vertical" >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+
+                android:background="@drawable/profile_picture" />
+
+            <TextView
+                android:id="@+id/upload"
+                android:layout_width="48dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/upload"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:layout_margin="10dp"
+            android:background="@color/white"  >
+
+
+
+            <!--- Show Full Name -->
+            <TextView
+                android:id="@+id/displayName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Name : "
+                android:textStyle="bold"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/displayName"
+                android:text="Loading !"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/displayEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/displayName"
+                android:layout_marginBottom="10dp"
+                android:text="Email : "
+                android:textStyle="bold"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/displayEmail"
+                android:text="Loading !"
+                android:textSize="16dp" />
+
+
+
+            <TextView
+                android:id="@+id/displayBirth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/displayEmail"
+                android:layout_marginBottom="10dp"
+                android:text="Birth Date : "
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/displayBirth"
+                android:text="Loading !"
+                android:textSize="16dp" />
+
+
+
+            <TextView
+                android:id="@+id/Displayphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/displayBirth"
+                android:layout_marginBottom="10dp"
+                android:text="Phone No : "
+                android:textStyle="bold"
+                android:textSize="16dp"  />
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/birthday"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/Displayphone"
+                android:text="Loading !"
+                android:textSize="16dp" />
+
+
+            <TextView
+                android:id="@+id/Displaygender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Displayphone"
+                android:layout_marginBottom="10dp"
+                android:text="Gender : "
+                android:textStyle="bold"
+                android:textSize="16dp"  />
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phone"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/Displayphone"
+                android:text="Loading !"
+                android:textSize="16dp" />
+
+
+
+            <TextView
+                android:id="@+id/DisplayUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gender"
+                android:layout_marginBottom="10dp"
+                android:text="Username : "
+                android:textStyle="bold"
+                android:textSize="16dp"  />
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gender"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/DisplayUsername"
+                android:text="Loading !"
+                android:textSize="16dp" />
+
+
+            <TextView
+                android:id="@+id/DisplayDivision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/DisplayUsername"
+                android:layout_marginBottom="10dp"
+                android:text="Division : "
+                android:textStyle="bold"
+                android:textSize="16dp"  />
+            <TextView
+                android:id="@+id/division"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userName"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/DisplayUsername"
+                android:text="Loading !"
+                android:textSize="16dp" />
+
+
+            <TextView
+                android:id="@+id/DisplayDistrict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/DisplayDivision"
+                android:layout_marginBottom="10dp"
+                android:text="District : "
+                android:textStyle="bold"
+                android:textSize="16dp"  />
+            <TextView
+                android:id="@+id/district"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/division"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/DisplayUsername"
+                android:text="Loading !"
+                android:textSize="16dp" />
+
+
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="30dp"
+            android:background="@color/black"
+            android:text="Log out"
+            android:textAllCaps="false"
+            android:textSize="19dp"
+            app:backgroundTint="@color/purple_500" />
+
+
+
+
+    </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+

@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">MilitaryAircraft</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="user_display_picture">Picture</string>
+
+
+    <string-array name="array_BD_states">
+        <item>Select Your State</item>
+        <item>Dhaka</item>
+        <item>Barisal</item>
+        <item>Chattogram</item>
+        <item>Mymensingh</item>
+        <item>Khulna</item>
+        <item>Rajshahi</item>
+        <item>Sylhet</item>
+
+    </string-array>
+
+    <string-array name="array_default_districts">
+        <item>Select Your District</item>
+    </string-array>
+
+    <string-array name="array_Dhaka_districts">
+        <item>Dhaka</item>
+        <item>Faridpur</item>
+        <item>Gazipur</item>
+        <item>GopalGanj</item>
+        <item>Manikganj</item>
+    </string-array>
+
+
+    <string-array name="array_Barisal_districts">
+        <item>Barguna</item>
+        <item>Barisal</item>
+        <item>Bhola</item>
+        <item>Jhalokati</item>
+        <item>Patuakhali</item>
+    </string-array>
+
+
+    <string-array name="array_Chattogram_districts">
+        <item>Bandarban</item>
+        <item>Chandpur</item>
+        <item>Chittagong</item>
+        <item>Comilla</item>
+        <item>Noakhali</item>
+    </string-array>
+
+
+    <string-array name="array_Mymensingh_districts">
+        <item>Mymensingh</item>
+        <item>Jamalpur</item>
+        <item>Sherpur</item>
+        <item>Netrokona</item>
+
+    </string-array>
+
+
+    <string-array name="array_Khulna_districts">
+        <item>Bagerhat</item>
+        <item>Jessore</item>
+        <item>Khulna</item>
+        <item>Kushtia</item>
+        <item>Magura</item>
+    </string-array>
+
+
+    <string-array name="array_Rajshahi_districts">
+        <item>Bogra</item>
+        <item>Rajshahi</item>
+        <item>Sirajganj</item>
+        <item>Natore</item>
+        <item>Nawabganj</item>
+    </string-array>
+
+
+    <string-array name="array_Sylhet_districts">
+        <item>Sylhet</item>
+        <item>Habiganj</item>
+        <item>Maulvibazar</item>
+        <item>Sunamganj</item>
+
+    </string-array>
+
+
+</resources>

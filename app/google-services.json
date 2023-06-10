@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "453640721551",
+    "project_id": "military-aircraft-betaversion",
+    "storage_bucket": "military-aircraft-betaversion.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453640721551:android:bde1b69a4850317bfaccfa",
+        "android_client_info": {
+          "package_name": "com.example.militaryaircraft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453640721551-hjh0jcumenvj8qprd934lduma27qrgn9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBl_aasL5iFwVx50UNPH0KgFzIGF59E3Ck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453640721551-hjh0jcumenvj8qprd934lduma27qrgn9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

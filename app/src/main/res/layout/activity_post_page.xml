@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Post_Page">
+
+
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_view" />
+
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="60dp"
+        android:padding="20sp"
+        android:text="Community Posts"
+        android:textColor="#F8F8F7"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/addpostCardview"
+        android:layout_below="@+id/top_view"
+        android:layout_marginTop="-3dp"
+        android:layout_marginBottom="3dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:id="@+id/addpostCardview"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardElevation="15dp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/uploadPost"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/write_post" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:text="Previous"
+        android:id="@+id/previousButton"
+        />
+
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="1"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold"
+        android:id="@+id/pageNo"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:layout_toRightOf="@+id/previousButton"
+        />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:text="Next"
+        android:layout_toRightOf="@id/pageNo"
+        android:id="@+id/nextButton"
+        />
+
+
+
+
+</RelativeLayout>
