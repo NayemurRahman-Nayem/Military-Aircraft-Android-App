@@ -26,6 +26,8 @@ public class Home_Page extends AppCompatActivity {
         rating = findViewById(R.id.Rating) ;
         Post = findViewById(R.id.post) ;
 
+
+
         // Login Page
         UserProfile.setOnClickListener(new View.OnClickListener() {
             @Override
