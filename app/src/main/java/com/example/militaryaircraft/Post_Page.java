@@ -3,7 +3,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,24 +22,22 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 public class Post_Page extends AppCompatActivity {
 
-
     CircleImageView UploadPost ;
     ListView listView ;
     Integer pagenumber = 1 ;
-    Integer totalpost = 0 ;
+    Integer startnumber = 1 , endnumber = 5 ;
     Button previousPage , nextPage  ;
     TextView pageNoView ;
-
     RecyclerView postRecyclerView ;
     PostAdapter postAdapter ;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference ;
     ArrayList<Post> postList;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +49,11 @@ public class Post_Page extends AppCompatActivity {
         pageNoView = findViewById(R.id.pageNo) ;
         postRecyclerView = findViewById(R.id.postList) ;
         postRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        pagenumber = Integer.parseInt(pageNoView.getText().toString()) ;
+
+        Toast.makeText(Post_Page.this," " + pagenumber + " " ,Toast.LENGTH_SHORT).show();
+
 
         // Upload user Post
         UploadPost.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +77,9 @@ public class Post_Page extends AppCompatActivity {
                     pagenumber-- ;
                     String s = Integer.toString(pagenumber) ;
                     pageNoView.setText(s);
-                    //makeList();
+                    endnumber = pagenumber*5 ;
+                    startnumber = endnumber - 4 ;
+                    makeList();
                 }
             }
         });
@@ -84,8 +88,10 @@ public class Post_Page extends AppCompatActivity {
             public void onClick(View view) {
                 pagenumber ++ ;
                 String s = Integer.toString(pagenumber) ;
+                endnumber = pagenumber*5 ;
+                startnumber = endnumber - 4 ;
                 pageNoView.setText(s);
-                //makeList() ;
+                makeList() ;
             }
         });
     }
@@ -98,9 +104,13 @@ public class Post_Page extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 postList = new ArrayList<Post>()  ;
+                int cnt = 0 ;
                 for (DataSnapshot postsnap: dataSnapshot.getChildren()) {
                     Post post = postsnap.getValue(Post.class);
-                    postList.add(post) ;
+                    if(cnt>=startnumber-1 && cnt<endnumber) {
+                        postList.add(post) ;
+                    }
+                    cnt ++ ;
                 }
                 postAdapter = new PostAdapter(context,postList) ;
                 postRecyclerView.setAdapter(postAdapter);
