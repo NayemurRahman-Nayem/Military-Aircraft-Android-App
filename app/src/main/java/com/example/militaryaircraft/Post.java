@@ -4,12 +4,12 @@ import android.media.Image;
 import android.net.Uri;
 
 import com.google.firebase.database.ServerValue;
-public class Post {
+public class  Post {
 
     private String postKey;
     private Integer like ;
     private  Integer dislike ;
-    private String description;
+    private String description , pictureURL ;
     private String userId;
     private String username ;
     private  String userprofilephoto ;
@@ -17,7 +17,7 @@ public class Post {
     private  String postDate , postTime ;
 
 
-    public Post( String description, String userId , Integer like , Integer dislike , String username , String userRealname , String postDate , String postTime , String userprofilephoto) {
+    public Post( String description, String userId , Integer like , Integer dislike , String username , String userRealname , String postDate , String postTime , String userprofilephoto ) {
         this.description = description;
         this.userId = userId;
         this.like = like ;
