@@ -7,6 +7,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.pdf.PdfDocument;
 import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Build;
@@ -28,9 +29,9 @@ import java.nio.ByteOrder;
 
 public class MLPage extends AppCompatActivity {
 
-    Button selectBtn, captureBtn;
+    Button selectBtn, captureBtn , PDF ;
     ImageView imageView;
-    TextView result;
+    TextView result1 , result2 , result3 ;
     Bitmap image;
     int imageSize = 224 ;
     @Override
@@ -40,8 +41,24 @@ public class MLPage extends AppCompatActivity {
         getPermission();
         selectBtn = findViewById(R.id.selectBtn) ;
         captureBtn = findViewById(R.id.captureBtn) ;
-        result = findViewById(R.id.result);
+        result1 = findViewById(R.id.result1);
+        result2 = findViewById(R.id.result2);
+        result3 = findViewById(R.id.result3);
         imageView = findViewById(R.id.imageView);
+        PDF = findViewById(R.id.pdf) ;
+
+
+
+
+        PDF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createpdf() ;
+            }
+        });
+
+
+
 
         selectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,21 +125,27 @@ public class MLPage extends AppCompatActivity {
             int maxPos = 0 ;                                                             // to find the index of the data where probability is maximum ;
             float maxConfidence = 0 ;
             float[] confidences = outputFeature0.getFloatArray() ;
+            String ans = "" ;
+            String[] classes = {"AG600" , "E2" , "F16"} ;
             for(int i=0;i<confidences.length;i++){
                 if(confidences[i]>maxConfidence) {
                     maxConfidence = confidences[i]  ;
                     maxPos = i ;
                 }
+                ans += classes[i] + " :  " ;
+                ans += Float.toString(confidences[i]) ;
             }
-            String[] classes = {"AG600" , "E2" , "F16"} ;
-            result.setText(classes[maxPos]);                                      // set the text of the value of the index maxPos
+
+            result1.setText(classes[0]  + "  :  " + confidences[0]*100);
+            result2.setText(classes[1]  + "  :  " +  confidences[1]*100);
+            result3.setText(classes[2]  + "  :  "  + confidences[2]*100);
+            // set the text of the value of the index maxPos
             // Releases model resources if no longer used.
             model.close();
         } catch (IOException e) {
             // TODO Handle the exception
         }
     }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -151,5 +174,11 @@ public class MLPage extends AppCompatActivity {
             classifyImage(image) ;
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+
+
+    public void createpdf() {
+        PdfDocument pdfDocument = new PdfDocument() ;
     }
 }
