@@ -384,13 +384,106 @@
 
         </GridLayout>
 
+
+
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/grid5"
+            android:columnCount="2"
+            android:rowCount="1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/grid4" >
+
+            <androidx.cardview.widget.CardView
+                android:layout_height="150dp"
+                android:layout_width="150dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="12dp"
+                android:layout_marginLeft="5dp"
+                android:layout_row="0"
+                android:layout_gravity="center"
+                android:layout_column="0"
+                >
+
+                <LinearLayout
+                    android:id="@+id/crystalReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"  >
+
+                    <ImageView
+                        android:layout_width="68dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/report"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Crystal Report"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_height="150dp"
+                android:layout_width="150dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="12dp"
+                android:layout_gravity="center"
+                android:layout_row="0"
+                android:layout_column="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/restApi"
+                    android:orientation="vertical"  >
+
+                    <ImageView
+
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/api"
+                        android:layout_gravity="center_horizontal"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RESTful API"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
     <TextView
         android:id="@+id/txtWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="30sp"
+        android:layout_marginLeft="20sp"
         android:layout_marginBottom="60dp"
         android:padding="20sp"
         android:text="DASHBOARD"

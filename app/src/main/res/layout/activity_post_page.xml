@@ -8,33 +8,31 @@
 
 
 
-    <View
-        android:id="@+id/top_view"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@drawable/bg_view" />
+<!--    <View-->
+<!--        android:id="@+id/top_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:background="@drawable/bg_view" />-->
 
 
-    <TextView
-        android:id="@+id/txtWelcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="60dp"
-        android:padding="20sp"
-        android:text="Community Posts"
-        android:textColor="#F8F8F7"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+<!--    <TextView-->
+<!--        android:id="@+id/txtWelcome"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginBottom="60dp"-->
+<!--        android:padding="20sp"-->
+<!--        android:text="Community Posts"-->
+<!--        android:textColor="#F8F8F7"-->
+<!--        android:textSize="40sp"-->
+<!--        android:textStyle="bold" />-->
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/postList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/addpostCardview"
-        android:layout_below="@+id/top_view"
         android:layout_marginTop="-3dp"
         android:layout_marginBottom="3dp" />
 

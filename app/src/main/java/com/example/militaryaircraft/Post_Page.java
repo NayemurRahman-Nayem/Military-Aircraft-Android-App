@@ -23,6 +23,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 public class Post_Page extends AppCompatActivity {
@@ -38,7 +39,6 @@ public class Post_Page extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference ;
     ArrayList<Post> postList;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,12 +49,7 @@ public class Post_Page extends AppCompatActivity {
         pageNoView = findViewById(R.id.pageNo) ;
         postRecyclerView = findViewById(R.id.postList) ;
         postRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         pagenumber = Integer.parseInt(pageNoView.getText().toString()) ;
-
-        Toast.makeText(Post_Page.this," " + pagenumber + " " ,Toast.LENGTH_SHORT).show();
-
-
         // Upload user Post
         UploadPost.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,9 +59,6 @@ public class Post_Page extends AppCompatActivity {
         });
         // for first time
         makeList();
-
-        // previous Page
-
         previousPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,17 +95,23 @@ public class Post_Page extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                postList = new ArrayList<Post>()  ;
-                int cnt = 0 ;
+                postList = new ArrayList<Post>();
+                ArrayList<Post> initial = new ArrayList<Post>() ;
                 for (DataSnapshot postsnap: dataSnapshot.getChildren()) {
                     Post post = postsnap.getValue(Post.class);
+                    initial.add(post);
+                }
+                Collections.reverse(initial);
+                int cnt = 0 ;
+                for (Post postsnap: initial) {
+                    Post post = postsnap ;
                     if(cnt>=startnumber-1 && cnt<endnumber) {
                         postList.add(post) ;
                     }
                     cnt ++ ;
                 }
                 postAdapter = new PostAdapter(context,postList) ;
-                postRecyclerView.setAdapter(postAdapter);
+                postRecyclerView.setAdapter(postAdapter) ;
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
