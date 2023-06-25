@@ -18,18 +18,16 @@
         />
 
 
-
     <Button
         android:id="@+id/selectBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select image"
-        android:layout_gravity="center"
-        android:layout_centerInParent="true"
         android:layout_below="@id/imageView"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
 
-        />
+        android:text="Select image" />
 
     <Button
         android:id="@+id/captureBtn"
@@ -80,17 +78,6 @@
         android:textStyle="bold"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        />
-
-
-    <Button
-        android:id="@+id/pdf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PDF"
-        android:layout_below="@+id/result3"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"
         />
 
 

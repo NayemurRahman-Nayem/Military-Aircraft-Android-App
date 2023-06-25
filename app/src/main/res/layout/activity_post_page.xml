@@ -7,26 +7,34 @@
     tools:context=".Post_Page">
 
 
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:background="@drawable/bg_view" />
 
-<!--    <View-->
-<!--        android:id="@+id/top_view"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="150dp"-->
-<!--        android:background="@drawable/bg_view" />-->
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="60dp"
+        android:padding="20sp"
+        android:text="Community Posts"
+        android:textColor="#F8F8F7"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
 
-<!--    <TextView-->
-<!--        android:id="@+id/txtWelcome"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:layout_marginBottom="60dp"-->
-<!--        android:padding="20sp"-->
-<!--        android:text="Community Posts"-->
-<!--        android:textColor="#F8F8F7"-->
-<!--        android:textSize="40sp"-->
-<!--        android:textStyle="bold" />-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/uploadPost"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/top_view"
+        android:layout_centerInParent="true"
+        android:background="@drawable/write_post" />
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -34,39 +42,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="-3dp"
+        android:layout_below="@+id/uploadPost"
+        android:layout_above="@+id/previousButton"
         android:layout_marginBottom="3dp" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:id="@+id/addpostCardview"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        app:cardElevation="15dp"
-        >
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/uploadPost"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/write_post" />
-
-    </androidx.cardview.widget.CardView>
 
 
     <Button
+        android:id="@+id/previousButton"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="20dp"
-        android:text="Previous"
-        android:id="@+id/previousButton"
-        />
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="70dp"
+        android:textAllCaps="false"
+        android:text="Pre" />
 
     <TextView
         android:layout_width="70dp"

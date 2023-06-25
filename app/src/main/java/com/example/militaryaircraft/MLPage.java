@@ -45,17 +45,8 @@ public class MLPage extends AppCompatActivity {
         result2 = findViewById(R.id.result2);
         result3 = findViewById(R.id.result3);
         imageView = findViewById(R.id.imageView);
-        PDF = findViewById(R.id.pdf) ;
 
 
-
-
-        PDF.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                createpdf() ;
-            }
-        });
 
 
 
@@ -67,6 +58,7 @@ public class MLPage extends AppCompatActivity {
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 intent.setType("image/*");
                 startActivityForResult(intent, 10);
+                createpdf() ;
             }
         });
 
@@ -75,6 +67,7 @@ public class MLPage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(intent, 12);
+                createpdf() ;
             }
         });
     }

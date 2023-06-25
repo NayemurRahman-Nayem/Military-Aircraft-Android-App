@@ -39,7 +39,6 @@
         <activity
             android:name=".RatingApp"
             android:exported="false" />
-
         <activity
             android:name=".Youtube_Video_Embedded"
             android:exported="false" />
