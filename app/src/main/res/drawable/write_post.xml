@@ -1,24 +1,12 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="800dp"
-    android:height="800dp"
-    android:viewportWidth="24"
-    android:viewportHeight="24">
+    android:width="1024dp"
+    android:height="1024dp"
+    android:viewportWidth="1024"
+    android:viewportHeight="1024">
   <path
-      android:pathData="M20,4a2.09,2.09 0,0 0,-2.95 0.12L10.17,11 9,15l4,-1.17L19.88,7A2.09,2.09 0,0 0,20 4Z"
-      android:strokeWidth="2"
-      android:fillColor="#2CA9BC"/>
+      android:pathData="M640,448c-38.4,0 -64,-25.6 -64,-64V256c0,-38.4 -25.6,-64 -64,-64s-64,25.6 -64,64v128c0,38.4 -25.6,64 -64,64H256c-38.4,0 -64,25.6 -64,64s25.6,64 64,64h128c38.4,0 64,25.6 64,64v128c0,38.4 25.6,64 64,64s64,-25.6 64,-64v-128c0,-38.4 25.6,-64 64,-64h128c38.4,0 64,-25.6 64,-64s-25.6,-64 -64,-64h-128z"
+      android:fillColor="#FDBB2D"/>
   <path
-      android:pathData="M20,4a2.09,2.09 0,0 0,-2.95 0.12L10.17,11 9,15l4,-1.17L19.88,7A2.09,2.09 0,0 0,20 4Z"
-      android:strokeLineJoin="round"
-      android:strokeWidth="2"
-      android:fillColor="#00000000"
-      android:strokeColor="#000000"
-      android:strokeLineCap="round"/>
-  <path
-      android:pathData="M12,3H4A1,1 0,0 0,3 4V20a1,1 0,0 0,1 1H20a1,1 0,0 0,1 -1V12"
-      android:strokeLineJoin="round"
-      android:strokeWidth="2"
-      android:fillColor="#00000000"
-      android:strokeColor="#000000"
-      android:strokeLineCap="round"/>
+      android:fillColor="#FF000000"
+      android:pathData="M512,192c38.4,0 64,25.6 64,64v128c0,38.4 25.6,64 64,64h128c38.4,0 64,25.6 64,64s-25.6,64 -64,64h-128c-38.4,0 -64,25.6 -64,64v128c0,38.4 -25.6,64 -64,64s-64,-25.6 -64,-64v-128c0,-38.4 -25.6,-64 -64,-64H256c-38.4,0 -64,-25.6 -64,-64s25.6,-64 64,-64h128c38.4,0 64,-25.6 64,-64V256c0,-38.4 25.6,-64 64,-64m0,-64c-70.4,0 -128,57.6 -128,128v128H256c-70.4,0 -128,57.6 -128,128s57.6,128 128,128h128v128c0,70.4 57.6,128 128,128s128,-57.6 128,-128v-128h128c70.4,0 128,-57.6 128,-128s-57.6,-128 -128,-128h-128V256c0,-70.4 -57.6,-128 -128,-128z"/>
 </vector>
