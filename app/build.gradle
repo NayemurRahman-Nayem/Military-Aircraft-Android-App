@@ -63,7 +63,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore'
     implementation platform('com.google.firebase:firebase-bom:31.2.2')
     implementation 'de.hdodenhof:circleimageview:3.1.0'
-
     implementation "androidx.cardview:cardview:1.0.0"
     implementation "androidx.recyclerview:recyclerview:1.2.1"
     implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
@@ -94,10 +93,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-inappmessaging-display'
     implementation 'com.google.firebase:firebase-analytics'
     implementation "androidx.cardview:cardview:1.0.0"
-
-
-    // Form Mohaimen's Project
-
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -120,26 +115,20 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
     implementation 'com.google.android.gms:play-services-location:21.0.1'
     implementation 'com.firebase:geofire-android-common:3.1.0'
-    // Import the BoM for the Firebase platform
     implementation platform('com.google.firebase:firebase-bom:31.0.2')
-    // Add the dependency for the Firebase Authentication library
-    // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation 'com.google.firebase:firebase-auth'
-    // Also add the dependency for the Google Play services library and specify its version
     implementation 'com.google.android.gms:play-services-auth:20.3.0'
     implementation 'com.google.firebase:firebase-inappmessaging-display'
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'org.tensorflow:tensorflow-lite-support:0.1.0'
     implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0'
-    // implementation 'com.greensock:gsap:2.0.2'
     implementation 'com.android.volley:volley:1.2.0'
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0'
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
-
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:{latest-version}'
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:{latest-version}'
-
+    implementation "com.airbnb.android:lottie:3.5.0"
 }
 
 apply plugin: 'com.google.gms.google-services'

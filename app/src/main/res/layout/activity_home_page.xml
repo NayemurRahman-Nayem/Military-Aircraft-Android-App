@@ -8,34 +8,43 @@
     tools:context=".Home_Page">
 
 
+
+
     <RelativeLayout
+        android:id="@+id/relative"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
 
-    <View
-        android:id="@+id/top_view"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:foregroundGravity="center"
-        android:background="@drawable/bg_view" />
+        >
 
-    <GridLayout
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:lottie_rawRes="@raw/coding"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            />
+
+        <GridLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:id="@+id/grid1"
         android:columnCount="2"
+        android:layout_centerInParent="true"
         android:rowCount="1"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
+        android:layout_below="@+id/lottie"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/top_view" >
+        >
 
         <androidx.cardview.widget.CardView
             android:layout_height="150dp"
             android:layout_width="150dp"
             app:cardCornerRadius="15dp"
             app:cardElevation="12dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="20dp"
             android:layout_row="0"
             android:layout_gravity="center"
             android:layout_column="0"
@@ -125,7 +134,7 @@
             android:layout_width="150dp"
             app:cardCornerRadius="15dp"
             app:cardElevation="12dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="20dp"
             android:layout_gravity="center"
             android:layout_row="0"
             android:layout_column="0"
@@ -136,6 +145,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/gotoMap"
                 android:layout_marginTop="2dp"
+
                 android:orientation="vertical"  >
 
                 <ImageView
@@ -218,7 +228,7 @@
             app:cardCornerRadius="15dp"
             app:cardElevation="12dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="20dp"
             android:layout_row="0"
             android:layout_column="0"
             >
@@ -279,7 +289,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
-                    android:text="Create Post "
+                    android:text="Community Posting"
                     android:layout_gravity="center_horizontal"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -295,94 +305,6 @@
 
 
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:id="@+id/grid4"
-            android:columnCount="2"
-            android:rowCount="1"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/grid3" >
-
-            <androidx.cardview.widget.CardView
-                android:layout_height="150dp"
-                android:layout_width="150dp"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="12dp"
-                android:layout_marginLeft="5dp"
-                android:layout_row="0"
-                android:layout_gravity="center"
-                android:layout_column="0"
-                >
-
-                <LinearLayout
-                    android:id="@+id/gsapAnimation"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"  >
-
-                    <ImageView
-                        android:layout_width="68dp"
-                        android:layout_height="80dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/gsap"
-
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="GSAP"
-                        android:layout_gravity="center_horizontal"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"
-                        />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_height="150dp"
-                android:layout_width="150dp"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="12dp"
-                android:layout_gravity="center"
-                android:layout_row="0"
-                android:layout_column="1"
-                >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/SASSCSS"
-                    android:orientation="vertical"  >
-
-                    <ImageView
-
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/sass"
-                        android:layout_gravity="center_horizontal"
-
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="SASS"
-                        android:layout_gravity="center_horizontal"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"
-                        />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-        </GridLayout>
 
 
 
@@ -390,19 +312,8 @@
 
 
 
-    <TextView
-        android:id="@+id/txtWelcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="20sp"
-        android:layout_marginBottom="60dp"
-        android:padding="20sp"
-        android:text="DASHBOARD"
-        android:textColor="#F8F8F8"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+
+
 
     </RelativeLayout>
 

@@ -30,7 +30,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 doWork() ;
-                startActivity(new Intent(SplashScreen.this, Login_Page.class)) ;
+                startActivity(new Intent(SplashScreen.this, GSAP_SASS.class)) ;
             }
         });
         thread.start();
