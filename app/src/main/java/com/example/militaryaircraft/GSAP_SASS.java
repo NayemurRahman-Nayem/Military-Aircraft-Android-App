@@ -48,7 +48,7 @@ public class GSAP_SASS extends AppCompatActivity {
     public void startApp(){
 
         //Toast.makeText(GSAP_SASS.this,"LOL",Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(GSAP_SASS.this, Home_Page.class);
+        Intent intent = new Intent(GSAP_SASS.this, Login_Page.class);
         startActivity(intent);
         finish();
     }
