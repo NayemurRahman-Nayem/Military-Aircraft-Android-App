@@ -48,7 +48,6 @@
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:text="Pending ...."
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -60,7 +59,6 @@
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:text="Pending ...."
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -72,15 +70,14 @@
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:text="Pending ...."
         android:textSize="30sp"
         android:textStyle="bold" />
 
 
     <androidx.cardview.widget.CardView
-        android:layout_height="150dp"
-        android:id="@+id/crystalReport"
+        android:layout_height="100dp"
         android:layout_width="150dp"
+        android:id="@+id/crystalReport"
         app:cardCornerRadius="15dp"
         app:cardElevation="12dp"
         android:layout_marginLeft="5dp"
@@ -98,24 +95,25 @@
             android:layout_height="match_parent"
             android:orientation="vertical"  >
 
-            <ImageView
-                android:id="@+id/reportVector"
-                android:layout_width="80dp"
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="0dp"
-                android:src="@drawable/report" />
+                app:lottie_rawRes="@raw/pdf"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Crystal Report"
-                android:layout_below="@+id/reportVector"
+                android:layout_below="@+id/lottie"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center_horizontal"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:text="Crystal Report"
                 android:textColor="@color/black"
-                />
+                android:textSize="15sp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

@@ -1,11 +1,14 @@
 package com.example.militaryaircraft ;
 
 
+import android.graphics.Bitmap;
+
 public class ReadWriteUserDetails {
 
 
     public String fullName,email,doB,gender,mobile,username,division,district;
     Float ratingApp ;
+    Bitmap bitmap ;
 
 
 

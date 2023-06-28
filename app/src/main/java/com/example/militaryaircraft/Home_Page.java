@@ -15,7 +15,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.auth.User;
 import android.os.Bundle;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.airbnb.lottie.LottieAnimationView;
 
@@ -23,7 +22,6 @@ import com.airbnb.lottie.LottieAnimationView;
 public class Home_Page extends AppCompatActivity {
 
     LinearLayout UserProfile , map , ML , Video , rating  , Post ;
-    LottieAnimationView lottieAnimationView ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,10 +32,6 @@ public class Home_Page extends AppCompatActivity {
         Video = findViewById(R.id.embeddedVideo) ;
         rating = findViewById(R.id.Rating) ;
         Post = findViewById(R.id.post) ;
-        //lottieAnimationView = findViewById(R.id.lottie) ;
-
-
-
 
 
         // Login Page

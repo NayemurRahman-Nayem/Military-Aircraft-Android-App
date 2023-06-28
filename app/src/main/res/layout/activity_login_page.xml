@@ -10,7 +10,7 @@
     <View
         android:id="@+id/top_view"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="160dp"
         android:background="@drawable/bg_view" />
 
 
@@ -20,13 +20,22 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="40sp"
+        android:layout_marginLeft="10sp"
         android:layout_marginBottom="60dp"
         android:padding="20sp"
         android:text="Login"
         android:textColor="#FBFBFB"
         android:textSize="50sp"
         android:textStyle="bold" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        app:lottie_rawRes="@raw/login"
+        android:layout_toRightOf="@+id/txtWelcome"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        />
 
     <EditText
         android:id="@+id/loginEmail"

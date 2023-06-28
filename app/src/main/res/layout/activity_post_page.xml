@@ -10,22 +10,30 @@
     <View
         android:id="@+id/top_view"
         android:layout_width="match_parent"
-        android:layout_height="125dp"
+        android:layout_height="150dp"
         android:background="@drawable/bg_view" />
-
 
     <TextView
         android:id="@+id/txtWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="26dp"
         android:layout_marginBottom="60dp"
         android:padding="20sp"
-        android:text="Community Blogs"
+        android:text="Posts"
         android:textColor="#F8F8F7"
         android:textSize="40sp"
         android:textStyle="bold" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        app:lottie_rawRes="@raw/postpage"
+        app:lottie_autoPlay="true"
+        android:layout_toRightOf="@+id/txtWelcome"
+        app:lottie_loop="true"
+        />
 
 
     <de.hdodenhof.circleimageview.CircleImageView

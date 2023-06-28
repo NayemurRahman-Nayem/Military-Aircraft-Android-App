@@ -1,9 +1,8 @@
 package com.example.militaryaircraft;
-
 import android.media.Image;
 import android.net.Uri;
-
 import com.google.firebase.database.ServerValue;
+
 public class  Post {
 
     private String postKey;
@@ -15,8 +14,6 @@ public class  Post {
     private  String userprofilephoto ;
     private  String userRealname ;
     private  String postDate , postTime ;
-
-
     public Post( String description, String userId , Integer like , Integer dislike , String username , String userRealname , String postDate , String postTime , String userprofilephoto ) {
         this.description = description;
         this.userId = userId;
@@ -28,15 +25,12 @@ public class  Post {
         this.postDate = postDate ;
         this.postTime = postTime ;
     }
-
     public void setUserprofilephoto(String userprofilephoto) {
         this.userprofilephoto = userprofilephoto;
     }
-
     public String getUserprofilephoto() {
         return userprofilephoto;
     }
-
     // make sure to have an empty constructor inside ur model class
     public Post() {
     }
@@ -52,31 +46,24 @@ public class  Post {
     public Integer getLike() {
         return like;
     }
-
     public String getUserRealname() {
         return userRealname;
     }
-
     public void setUserRealname(String userRealname) {
         this.userRealname = userRealname;
     }
-
     public void setPostDate(String postDate) {
         this.postDate = postDate;
     }
-
     public void setPostTime(String postTime) {
         this.postTime = postTime;
     }
-
     public String getPostDate() {
         return postDate;
     }
-
     public String getPostTime() {
         return postTime;
     }
-
     public void setPostKey(String postKey) {
         this.postKey = postKey;
     }

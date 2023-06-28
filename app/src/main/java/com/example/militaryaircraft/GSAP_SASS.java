@@ -27,7 +27,6 @@ public class GSAP_SASS extends AppCompatActivity {
 
         // Load an HTML file from assets folder
         webView.loadUrl("file:///android_asset/gsap.html");
-
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {

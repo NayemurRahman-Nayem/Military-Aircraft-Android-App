@@ -19,8 +19,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="write_post" />
-                            <entry key="sourceFile" value="C:\Users\nayem\Downloads\post.svg" />
+                            <entry key="outputName" value="profile_picture" />
+                            <entry key="sourceFile" value="C:\Users\nayem\Downloads\profile_picture.svg" />
                           </map>
                         </option>
                       </PersistentState>

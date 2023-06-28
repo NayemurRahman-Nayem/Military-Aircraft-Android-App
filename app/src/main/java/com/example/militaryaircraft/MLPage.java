@@ -258,8 +258,6 @@ public class MLPage extends AppCompatActivity {
 
 
 
-
-
         //Draw text and lines
         paint.setTextAlign(Paint.Align.CENTER);
         paint.setTextSize(22f);

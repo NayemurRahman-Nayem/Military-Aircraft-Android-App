@@ -14,6 +14,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.annotation.RequiresPermission ;
 import androidx.appcompat.app.AppCompatActivity ;
@@ -62,7 +63,7 @@ public class UserProfile_Page extends AppCompatActivity {
     ActivityResultLauncher<String> launcher;
     FirebaseDatabase database;
     FirebaseStorage storage;
-    public Button logout;
+    CardView logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -212,13 +213,13 @@ public class UserProfile_Page extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 name.setText(value.getString("fname"));
-                email.setText(value.getString("email"));
-                phone.setText(value.getString("phone"));
-                birthday.setText(value.getString("dateOfBirth"));
-                gender.setText(value.getString("gender"));
-                UserName.setText(value.getString("username"));
-                Division.setText(value.getString("division"));
-                District.setText(value.getString("district"));
+                email.setText("EMAIL  :  " + value.getString("email"));
+                phone.setText("PHONE  :  " + value.getString("phone"));
+                birthday.setText("Date of Birth  :  " + value.getString("dateOfBirth"));
+                gender.setText("Gender  :  " + value.getString("gender"));
+                UserName.setText("Username  :  " + value.getString("username"));
+                Division.setText("Division  :  " + value.getString("division"));
+                District.setText("District  :  " + value.getString("district"));
             }
         });
 

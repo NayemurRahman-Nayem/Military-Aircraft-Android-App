@@ -27,14 +27,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="40dp"
             android:layout_marginLeft="30sp"
+            android:layout_marginTop="26dp"
             android:layout_marginBottom="60dp"
-            android:padding="20sp"
+            android:padding="10sp"
             android:text="Sign Up "
             android:textColor="#F6F5F3"
             android:textSize="40sp"
             android:textStyle="bold" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            app:lottie_rawRes="@raw/register"
+            app:lottie_autoPlay="true"
+            android:layout_toRightOf="@+id/txtWelcome"
+            app:lottie_loop="true"
+            />
 
 
 
