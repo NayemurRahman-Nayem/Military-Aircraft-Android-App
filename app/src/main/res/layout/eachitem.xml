@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cardUseCompatPadding="true"
+        cardElevation="12dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:id="@+id/blackbarup"
+                android:background="#0C0C0C"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Content "
+                android:textSize="35dp"
+                android:layout_below="@+id/blackbarup"
+                android:id="@+id/Content"
+                android:textStyle="italic"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Content "
+                android:textSize="25dp"
+                android:id="@+id/Authorname"
+                android:layout_below="@+id/Content"
+                android:textColor="#5596CA"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/Authorname"
+                android:id="@+id/blackbar"
+                android:background="#0C0C0C"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
