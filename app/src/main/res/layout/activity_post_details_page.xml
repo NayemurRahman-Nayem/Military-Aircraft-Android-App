@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PostDetails_Page">
+    tools:context=".Blogs.PostDetails_Page">
 
     <RelativeLayout
         android:layout_width="match_parent"

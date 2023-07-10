@@ -1,4 +1,4 @@
-package com.example.militaryaircraft;
+package com.example.militaryaircraft.Blogs;
 import android.media.Image;
 import android.net.Uri;
 import com.google.firebase.database.ServerValue;

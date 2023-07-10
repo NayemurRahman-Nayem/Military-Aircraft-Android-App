@@ -1,4 +1,4 @@
-package com.example.militaryaircraft;
+package com.example.militaryaircraft.Blogs;
 
 public class Comment {
 

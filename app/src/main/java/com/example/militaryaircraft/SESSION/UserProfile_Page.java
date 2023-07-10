@@ -1,11 +1,10 @@
-package com.example.militaryaircraft ;
+package com.example.militaryaircraft.SESSION;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.activity.result.ActivityResultCallback;
@@ -16,18 +15,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-import androidx.annotation.RequiresPermission ;
-import androidx.appcompat.app.AppCompatActivity ;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle ;
-import android.view.View ;
-import android.widget.Button;
-import android.widget.ImageView ;
-import android.widget.ProgressBar ;
-import android.widget.TextView ;
-import android.widget.Toast ;
+
 import com.bumptech.glide.Glide;
+import com.example.militaryaircraft.R;
 import com.example.militaryaircraft.databinding.ActivityUserProfilePageBinding;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -39,12 +29,9 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.auth.User;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-
-import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -71,7 +58,7 @@ public class UserProfile_Page extends AppCompatActivity {
         getSupportActionBar().setTitle("Home") ;
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user == null) {
-            startActivity(new Intent(UserProfile_Page.this,Login_Page.class));
+            startActivity(new Intent(UserProfile_Page.this, Login_Page.class));
         }
         binding = ActivityUserProfilePageBinding.inflate(getLayoutInflater());
         name=findViewById(R.id.name);

@@ -1,17 +1,13 @@
-package com.example.militaryaircraft;
+package com.example.militaryaircraft.SESSION;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import android.Manifest;
+
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
-import android.content.ActivityNotFoundException ;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent ;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
-import android.net.Network;
 import android.net.NetworkInfo;
 import android.os.Bundle ;
 import android.provider.Settings;
@@ -25,19 +21,14 @@ import android.widget.EditText ;
 import android.widget.ProgressBar ;
 import android.widget.TextView ;
 import android.widget.Toast ;
-import com.example.militaryaircraft.databinding.ActivityLoginPageBinding ;
+
+import com.example.militaryaircraft.Home_Page;
+import com.example.militaryaircraft.R;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
-import com.google.firebase.auth.FirebaseUser;
-import java.util.HashMap;
-import java.util.logging.LoggingMXBean;
-
-
 
 
 public class Login_Page extends AppCompatActivity {
@@ -48,7 +39,6 @@ public class Login_Page extends AppCompatActivity {
     private FirebaseAuth authProfile;
     private  SharedPreferences sharedPreferences ;
     private FirebaseAuth mAuth;
-    SessionManager sessionManager;
     private static final String TAG = "LoginActivity";
     TextView register ;
     @Override
@@ -129,7 +119,7 @@ public class Login_Page extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Login_Page.this,Register_Page.class));
+                startActivity(new Intent(Login_Page.this, Register_Page.class));
             }
         });
     }

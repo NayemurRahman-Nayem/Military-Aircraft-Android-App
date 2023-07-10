@@ -1,16 +1,13 @@
-package com.example.militaryaircraft;
+package com.example.militaryaircraft.Animations;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProviderGetKt;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
+import com.example.militaryaircraft.R;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 
 public class SplashScreen extends AppCompatActivity {

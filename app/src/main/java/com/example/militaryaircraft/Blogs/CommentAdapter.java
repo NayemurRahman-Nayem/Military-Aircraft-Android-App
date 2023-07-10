@@ -1,6 +1,5 @@
-package com.example.militaryaircraft;
+package com.example.militaryaircraft.Blogs;
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.militaryaircraft.R;
 
 import java.util.ArrayList;
 

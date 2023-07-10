@@ -1,4 +1,4 @@
-package com.example.militaryaircraft ;
+package com.example.militaryaircraft.SESSION;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,13 +18,14 @@ import android.widget.Spinner ;
 import android.widget.Toast ;
 import androidx.annotation.NonNull ;
 import androidx.appcompat.app.AppCompatActivity ;
+
+import com.example.militaryaircraft.R;
 import com.google.android.gms.tasks.OnCompleteListener ;
 import com.google.android.gms.tasks.Task ;
 import com.google.firebase.auth.FirebaseAuth ;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException ;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException ;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException ;
-import com.google.firebase.auth.FirebaseUser ;
 import com.google.firebase.database.DataSnapshot ;
 import com.google.firebase.database.DatabaseError ;
 import com.google.firebase.database.DatabaseReference ;
@@ -35,7 +36,6 @@ import com.google.firebase.firestore.DocumentReference ;
 import com.google.firebase.firestore.FirebaseFirestore ;
 import java.util.Calendar ;
 import java.util.HashMap ;
-import java.util.Locale ;
 import java.util.Map;
 
 public class Register_Page extends AppCompatActivity {
@@ -307,7 +307,7 @@ public class Register_Page extends AppCompatActivity {
                                     Log.d(TAG,"onSuccess: user Profile is created for " + userid);
                                 }
                             });
-                            startActivity(new Intent(Register_Page.this,Login_Page.class));
+                            startActivity(new Intent(Register_Page.this, Login_Page.class));
                         }
                         else {
                             Toast.makeText(Register_Page.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show() ;

@@ -1,7 +1,9 @@
-package com.example.militaryaircraft;
+package com.example.militaryaircraft.MAP;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 import android.os.Bundle;
+
+import com.example.militaryaircraft.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;

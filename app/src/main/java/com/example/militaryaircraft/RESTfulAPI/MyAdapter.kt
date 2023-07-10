@@ -1,12 +1,12 @@
-package com.example.militaryaircraft
+package com.example.militaryaircraft.RESTfulAPI
 
 import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.militaryaircraft.R
 
 class MyAdapter(val context : Activity, val quoteList : List<Quote>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 

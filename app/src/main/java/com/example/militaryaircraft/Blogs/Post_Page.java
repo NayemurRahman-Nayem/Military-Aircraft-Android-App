@@ -1,4 +1,4 @@
-package com.example.militaryaircraft;
+package com.example.militaryaircraft.Blogs;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,25 +6,21 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.militaryaircraft.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.List;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 public class Post_Page extends AppCompatActivity {
 
@@ -54,7 +50,7 @@ public class Post_Page extends AppCompatActivity {
         UploadPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Post_Page.this,Add_Post.class)) ;
+                startActivity(new Intent(Post_Page.this, Add_Post.class)) ;
             }
         });
         // for first time

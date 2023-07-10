@@ -29,28 +29,28 @@
         android:theme="@style/Theme.MilitaryAircraft"
         tools:targetApi="31">
         <activity
-            android:name=".RESTfulAPI"
+            android:name=".RESTfulAPI.RESTfulAPI"
             android:exported="false" />
         <activity
-            android:name=".GSAP_SASS"
+            android:name=".Animations.GSAP_SASS"
             android:exported="false" />
         <activity
-            android:name=".PostDetails_Page"
+            android:name=".Blogs.PostDetails_Page"
             android:exported="false" />
         <activity
-            android:name=".Add_Post"
+            android:name=".Blogs.Add_Post"
             android:exported="false" />
         <activity
-            android:name=".Post_Page"
+            android:name=".Blogs.Post_Page"
             android:exported="false" />
         <activity
-            android:name=".RatingApp"
+            android:name=".Rating.RatingApp"
             android:exported="false" />
         <activity
-            android:name=".Youtube_Video_Embedded"
+            android:name=".YouTube.Youtube_Video_Embedded"
             android:exported="false" />
         <activity
-            android:name=".UserProfile_Page"
+            android:name=".SESSION.UserProfile_Page"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -72,7 +72,7 @@
             android:value="AIzaSyAtZ_btYK2icMhyFg6XzHGG6xbkO21Phww" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".MAP.MapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
@@ -83,28 +83,28 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Register_Page"
+            android:name=".SESSION.Register_Page"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Login_Page"
+            android:name=".SESSION.Login_Page"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MLPage"
+            android:name=".ML.MLPage"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SplashScreen"
+            android:name=".Animations.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

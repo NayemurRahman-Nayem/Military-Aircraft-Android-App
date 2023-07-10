@@ -1,4 +1,4 @@
-package com.example.militaryaircraft
+package com.example.militaryaircraft.RESTfulAPI
 
 data class Quote(
     val author: String,

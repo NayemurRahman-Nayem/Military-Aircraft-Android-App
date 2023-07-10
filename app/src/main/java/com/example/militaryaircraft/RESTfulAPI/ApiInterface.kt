@@ -1,5 +1,6 @@
-package com.example.militaryaircraft
+package com.example.militaryaircraft.RESTfulAPI
 
+import com.example.militaryaircraft.RESTfulAPI.MyData
 import retrofit2.Call
 import retrofit2.http.GET
 

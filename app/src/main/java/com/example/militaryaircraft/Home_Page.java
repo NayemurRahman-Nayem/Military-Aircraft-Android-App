@@ -1,22 +1,17 @@
 package com.example.militaryaircraft;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
-import android.media.tv.TvContract;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import com.airbnb.lottie.LottieAnimationView;
-import com.airbnb.lottie.LottieDrawable;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.auth.User;
-import android.os.Bundle;
-import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
-import com.airbnb.lottie.LottieAnimationView;
+
+import com.example.militaryaircraft.Blogs.Post_Page;
+import com.example.militaryaircraft.MAP.MapsActivity;
+import com.example.militaryaircraft.ML.MLPage;
+import com.example.militaryaircraft.RESTfulAPI.RESTfulAPI;
+import com.example.militaryaircraft.Rating.RatingApp;
+import com.example.militaryaircraft.SESSION.UserProfile_Page;
+import com.example.militaryaircraft.YouTube.Youtube_Video_Embedded;
 
 
 public class Home_Page extends AppCompatActivity {
@@ -59,7 +54,7 @@ public class Home_Page extends AppCompatActivity {
         UserProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Home_Page.this,UserProfile_Page.class));
+                startActivity(new Intent(Home_Page.this, UserProfile_Page.class));
             }
         });
 
@@ -68,7 +63,7 @@ public class Home_Page extends AppCompatActivity {
         ML.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Home_Page.this,MLPage.class));
+                startActivity(new Intent(Home_Page.this, MLPage.class));
             }
         });
 
@@ -76,7 +71,7 @@ public class Home_Page extends AppCompatActivity {
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Home_Page.this,MapsActivity.class));
+                startActivity(new Intent(Home_Page.this, MapsActivity.class));
             }
         });
 
@@ -92,7 +87,7 @@ public class Home_Page extends AppCompatActivity {
         rating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Home_Page.this,RatingApp.class));
+                startActivity(new Intent(Home_Page.this, RatingApp.class));
             }
         });
 
@@ -100,7 +95,7 @@ public class Home_Page extends AppCompatActivity {
         Post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Home_Page.this,Post_Page.class));
+                startActivity(new Intent(Home_Page.this, Post_Page.class));
             }
         });
 

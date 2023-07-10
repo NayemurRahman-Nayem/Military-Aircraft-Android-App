@@ -1,4 +1,4 @@
-package com.example.militaryaircraft;
+package com.example.militaryaircraft.ML;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,7 +29,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.example.militaryaircraft.R;
+import com.example.militaryaircraft.SESSION.ReadWriteUserDetails;
 import com.example.militaryaircraft.ml.ModelUnquant;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -38,9 +39,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import org.tensorflow.lite.DataType;
-import org.tensorflow.lite.support.image.TensorImage;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -77,12 +76,13 @@ public class MLPage extends AppCompatActivity {
         result3 = findViewById(R.id.result3);
         imageView = findViewById(R.id.imageView);
         PDF = findViewById(R.id.crystalReport) ;
-
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
 
 
 
+
+        // Crystal Report || PDF
         String userID = firebaseUser.getUid();
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Registered Users");
         databaseReference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -102,8 +102,6 @@ public class MLPage extends AppCompatActivity {
                 Toast.makeText(MLPage.this, "Something went wrong", Toast.LENGTH_LONG).show();
             }
         });
-
-
         PDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -111,6 +109,11 @@ public class MLPage extends AppCompatActivity {
                 createpdf();
             }
         });
+
+
+
+
+
 
         selectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
