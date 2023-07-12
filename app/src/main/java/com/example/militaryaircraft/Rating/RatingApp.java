@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.militaryaircraft.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -18,6 +17,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
+
 
 public class RatingApp extends AppCompatActivity {
 
