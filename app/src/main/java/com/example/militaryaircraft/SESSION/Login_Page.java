@@ -59,13 +59,9 @@ public class Login_Page extends AppCompatActivity {
 
 
 
-        //Toast.makeText(this, "Has Login Page ", Toast.LENGTH_SHORT).show();
-
         SharedPreferences sharedPreferences = getSharedPreferences("login", Context.MODE_PRIVATE);
         boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedin", false);
-        // Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
         if(isLoggedIn){
-            //Toast.makeText(this, "Already exists !!", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(Login_Page.this, Home_Page.class));
         }
 
@@ -73,12 +69,6 @@ public class Login_Page extends AppCompatActivity {
 
 
 
-//        sessionManager = new SessionManager(Login_Page.this, SessionManager.REMEMBER_ME_SESSION);
-//        if(sessionManager.checkRememberMe()){
-//            HashMap<String, String> rememberMeDetails = sessionManager.getRememberMeDetailsFromSession();
-//            editTextLoginEmail.setText(rememberMeDetails.get(SessionManager.KEY_REMEMBER_ME_EMAIL));
-//            editTextLoginPwd.setText(rememberMeDetails.get(SessionManager.KEY_REMEMBER_ME_PASSWORD));
-//        }
         mAuth = FirebaseAuth.getInstance() ;
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override

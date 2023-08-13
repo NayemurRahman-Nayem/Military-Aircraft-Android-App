@@ -2,7 +2,6 @@ package com.example.militaryaircraft.Blogs;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
@@ -15,24 +14,22 @@ import com.bumptech.glide.Glide;
 import com.example.militaryaircraft.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-
+import com.google.firebase.auth.FirebaseAuth ;
+import com.google.firebase.auth.FirebaseUser ;
+import com.google.firebase.database.DataSnapshot ;
+import com.google.firebase.database.DatabaseError ;
+import com.google.firebase.database.DatabaseReference ;
+import com.google.firebase.database.FirebaseDatabase ;
+import com.google.firebase.database.ValueEventListener ;
+import com.google.firebase.firestore.DocumentReference ;
+import com.google.firebase.firestore.DocumentSnapshot ;
+import com.google.firebase.firestore.EventListener ;
+import com.google.firebase.firestore.FirebaseFirestore ;
+import com.google.firebase.firestore.FirebaseFirestoreException ;
+import com.google.firebase.storage.FirebaseStorage ;
+import com.google.firebase.storage.StorageReference ;
 import java.text.DateFormatSymbols;
 import java.util.Calendar;
-
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Add_Post extends AppCompatActivity {
@@ -56,11 +53,10 @@ public class Add_Post extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_post);
-        // ----------------------------------------------------------
+        // -----------------------------------------------------------------------------------------
         popupDescription = findViewById(R.id.popup_description);
         popupAddBtn = findViewById(R.id.popup_add);
         userphoto = findViewById(R.id.userPhoto) ;
-
         // Add post click Listener
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
         FirebaseStorage storage = FirebaseStorage.getInstance();

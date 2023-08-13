@@ -336,7 +336,6 @@ public class Register_Page extends AppCompatActivity {
         progressBar.setVisibility(View.GONE);
     }
 
-
     // to check the username is already in the database .
 
     private void checkUser() {

@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.example.militaryaircraft.R;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -25,11 +24,11 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import java.text.DateFormatSymbols ;
+import java.util.ArrayList ;
+import java.util.Calendar ;
+import java.util.Objects ;
 
-import java.text.DateFormatSymbols;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Objects;
 
 public class PostDetails_Page extends AppCompatActivity {
 
@@ -96,7 +95,6 @@ public class PostDetails_Page extends AppCompatActivity {
             }
         }) ;
 
-
         // Get the userRealName #############################################################################################
         firebaseFirestore = FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
@@ -137,7 +135,6 @@ public class PostDetails_Page extends AppCompatActivity {
             }
         });
     }
-
 
     void CreateComment() {
         Calendar calendar = Calendar.getInstance() ;

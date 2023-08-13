@@ -5,33 +5,33 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.bumptech.glide.Glide;
-import com.example.militaryaircraft.R;
-
-import java.util.ArrayList;
+import androidx.recyclerview.widget.RecyclerView ;
+import com.bumptech.glide.Glide ;
+import com.example.militaryaircraft.R ;
+import java.util.ArrayList ;
 
 public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.MyViewHolder> {
     Context context ;
     ArrayList<Comment> mData ;
     public CommentAdapter(Context context, ArrayList<Comment> mData) {
-        this.context = context;
-        this.mData = mData;
+        this.context = context ;
+        this.mData = mData ;
     }
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View row = LayoutInflater.from(context).inflate(R.layout.comment_listview,parent,false);
-        return new MyViewHolder(row);
+        View row = LayoutInflater.from(context).inflate(R.layout.comment_listview,parent,false) ;
+        return new MyViewHolder(row) ;
     }
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.Content.setText(mData.get(position).getVal());
-        holder.username.setText(mData.get(position).getUserRealname());
-        holder.datetime.setText(mData.get(position).getDate() + "  " + mData.get(position).getTime() );
-        if(mData.get(position).getUserprofileUrl()!="NULL"){
+        holder.Content.setText(mData.get(position).getVal()) ;
+        holder.username.setText(mData.get(position).getUserRealname()) ;
+        //Toast.makeText(this.context,mData.get(position).getUserRealname(),Toast.LENGTH_LONG).show() ;
+        holder.datetime.setText(mData.get(position).getDate() + "  " + mData.get(position).getTime() ) ;
+        if(mData.get(position).getUserprofileUrl()!="NULL") {
             Glide
                     .with(holder.userImage.getContext())
                     .load(mData.get(position).getUserprofileUrl())

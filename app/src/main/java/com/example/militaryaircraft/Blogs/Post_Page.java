@@ -4,22 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.content.Intent ;
+import android.os.Bundle ;
+import android.view.View ;
+import android.widget.Button ;
+import android.widget.ListView ;
+import android.widget.TextView ;
 import android.widget.Toast;
-
 import com.example.militaryaircraft.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.ArrayList ;
+import java.util.Collections ;
+
+
 
 import de.hdodenhof.circleimageview.CircleImageView;
 public class Post_Page extends AppCompatActivity {
@@ -105,6 +106,9 @@ public class Post_Page extends AppCompatActivity {
                         postList.add(post) ;
                     }
                     cnt ++ ;
+                }
+                if(postList.size()==0) {
+                    Toast.makeText(Post_Page.this,"No Posts available !",Toast.LENGTH_LONG).show();
                 }
                 postAdapter = new PostAdapter(context,postList) ;
                 postRecyclerView.setAdapter(postAdapter) ;

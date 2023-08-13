@@ -3,8 +3,8 @@ plugins {
     id 'com.google.gms.google-services'
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
     id 'org.jetbrains.kotlin.android'
-
 }
+
 
 android {
     namespace 'com.example.militaryaircraft'
@@ -17,7 +17,6 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -36,7 +35,6 @@ android {
     viewBinding {
         enabled = true
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -45,6 +43,7 @@ android {
         jvmTarget = '1.8'
     }
 }
+
 
 dependencies {
 
@@ -134,7 +133,6 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:{latest-version}'
     implementation "com.airbnb.android:lottie:3.5.0"
-
 
     // add retrofit dependency
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'

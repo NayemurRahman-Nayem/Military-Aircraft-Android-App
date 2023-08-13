@@ -112,7 +112,5 @@ public class RatingApp extends AppCompatActivity {
                 Toast.makeText(RatingApp.this,"Something Wrong .\n Try again ! ",Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
 }
